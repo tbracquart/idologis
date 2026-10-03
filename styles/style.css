@@ -46,10 +46,18 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
+	border-radius: 1rem;
 }
 
 .logo-menu {
-   width: 30%;
+	display: flex;
+	width: 30%;
+	margin-left: 1rem;
+}
+
+.logo-accueil {
+	display: flex;
+	align-items: center;
 }
 
 h1 {
@@ -70,6 +78,7 @@ p {
 
 a {
 	color: #0066cc;
+	border: 2px;
 }
 
 a:hover {
