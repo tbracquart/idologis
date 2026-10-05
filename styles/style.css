@@ -1,161 +1,171 @@
 /* ==========================================================================
-   1. POLICES LOCALES
+   TRANSITIONS ENTRE LES PAGES
+   ========================================================================== */
+
+@view-transition {
+    navigation: auto;
+}
+
+
+/* ==========================================================================
+   1. POLICES LOCALES (@font-face)
    ========================================================================== */
 
 @font-face {
-	font-display: swap;
-	font-family: 'Fira Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/fira-sans-v18-latin-regular.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/fira-sans-v18-latin-regular.woff2') format('woff2');
 }
 
 
 /* ==========================================================================
-   2. RESET
-   ========================================================================== */
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html {
-	height: 100%;
-}
-
-body {
-	min-height: 100%;
-}
-
-
-/* ==========================================================================
-   3. ÉLÉMENTS GÉNÉRAUX
+   2. PRÉFÉRENCES GLOBALES
    ========================================================================== */
 
 html {
-	font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
+
+
+/* ==========================================================================
+   3. STRUCTURE GÉNÉRALE DE LA PAGE
+   ========================================================================== */
+
+/* --- CORPS DE LA PAGE (Body) --- */
 
 body {
-	background-color: #f5f5f5;
-	color: #222222;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    background-image: url('../assets/images/fond.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 1rem;
-}
 
-.logo-menu {
-	display: flex;
-	width: 30%;
-	margin-left: 1rem;
-}
+/* --- CONTENU PRINCIPAL (Main) --- */
 
-.logo-accueil {
-	display: flex;
-	align-items: center;
-}
-
-h1 {
-	font-size: 2.25rem;
-}
-
-h2 {
-	font-size: 1.75rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-}
-
-p {
-	font-size: 1rem;
-}
-
-a {
-	color: #0066cc;
-	border: 2px;
-}
-
-a:hover {
-	color: #004499;
+main {
+    flex: 1;
 }
 
 
 /* ==========================================================================
-   4. CONTENEURS
+   4. COMPOSANTS COMMUNS
    ========================================================================== */
 
-.container {
+/* --- CARTES --- */
 
-}
-
-.wrapper {
-
-}
-
-section {
-
-}
-
-article {
-
-}
-
-aside {
-
+header,
+nav,
+footer,
+main section,
+main article {
+    background-color: #FFFFFFAA;
+    border-radius: 2rem;
+    padding: 1rem;
+    backdrop-filter: blur(1rem);
 }
 
 
-/* ==========================================================================
-   5. EN-TÊTE
-   ========================================================================== */
+/* --- CARTES CENTRÉES --- */
 
-header {
-   padding: 1.5rem;
-   background-color: lightblue;
- }
+header,
+footer,
+main section,
+main article {
+    margin: 2rem;
+    text-align: center;
+}
+
+
+/* --- EN-TÊTE (Header) --- */
 
 header h1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-header p {
-
+    font-size: 2.25rem;
 }
 
 
-/* ==========================================================================
-   6. NAVIGATION
-   ========================================================================== */
-
-nav {
-   display: flex;
-   background-color: lightblue;
-}
+/* --- MENU DE NAVIGATION (Nav) --- */
 
 nav ul {
-   display: flex;
-   list-style: none;
-   gap: 2rem;
-   align-items: center;
-   margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
 }
 
 nav li {
+    background-color: #FCEEFAAA;
+    border-radius: 2rem;
+}
 
+nav li:hover {
+    background-color: #ECEEFAAA;
 }
 
 nav a {
-
+    display: block;
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
-nav a:hover {
-   
+
+/* --- PIED DE PAGE (Footer) --- */
+
+footer p {
+    font-size: 1rem;
 }
+
+
+/* ==========================================================================
+   5. CONTENU PRINCIPAL
+   ========================================================================== */
+
+/* --- GROUPES D'ARTICLES --- */
+
+main > section > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+main > section > div > article {
+    margin: 0;
+}
+
+
+/* --- IMAGES --- */
+
+main img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+
+/* --- TYPOGRAPHIE --- */
+
+main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+main p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ==========================================================================
+   6. TABLEAUX
+   ========================================================================== */
