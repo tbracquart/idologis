@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,61 +13,41 @@
 	</head>
 
 	<body>
+		<header class="card text-center">
+			<a href="index.html"><img src="assets/images/logo.png" alt="Logo Idologis" class="logo-menu"></a>
 
-		<header>
-			<h1>Idologis</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" class="btn">Accueil</a></li>
+					<li><a href="ventes.html" class="btn">Ventes</a></li>
+					<li><a href="locations.html" class="btn">Locations</a></li>
+					<li><a href="contact.html" class="btn">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
 
-		<nav>
-		
-			<div>	
-				<a href="index.html"><img src="assets/images/logo.jpg" alt="Logo Idologis" class="logo-menu"></a>
-			</div>
+		<main class="card text-center">
+			<h2>Liste des locations immobilières du moment</h2>
+    
+			<div class="grid-3-columns">
 			
-			<ul>
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="ventes.html">Ventes</a></li>
-				<li><a href="locations.html">Locations</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			
-		</nav>
-
-		<main>
-			<article>
-				<h2>Locations</h2>
-				<h3>Liste des locations immobilières du moment</h3>
-
-				<table>
-					<thead>
-						<tr>
-							<th>Référence</th>
-							<th>Type</th>
-							<th>Secteur</th>
-							<th>Surface</th>
-							<th>Prix</th>
-							<th>Fiche détaillée</th>
-						</tr>
-					</thead>
-
-					<tbody>
-						<tr>
-							<td>89</td>
-							<td>Appartement</td>
-							<td>Douai</td>
-							<td>60 m²</td>
-							<td>720 € / mois</td>
-							<td><a href="biens/locations/89.html">Voir</a></td>
-						</tr>
-					</tbody>
-				</table>
-
-			</article>
+				<article class="card move-card">
+				<h3>Référence 89</h3>
+				<img src="assets/images/biens/locations/89.jpg" alt="Photo de la référence 89">
+					<dl class="property-details card">
+						<dt>Type :</dt><dd>Appartement</dd>
+						<dt>Secteur :</dt><dd>Douai</dd>
+						<dt>Surface :</dt><dd>60 m²</dd>
+						<dt>Prix :</dt><dd>720 € / mois</dd>
+					</dl>
+					<a href="biens/locations/89.html" class="btn">Voir</a>
+				</article>
+	
+			</div>	
 		</main>
 
-		<footer>
+		<footer class="card text-center">
 			<p>&copy; 2026 Idologis.</p>
 		</footer>
-
 	</body>
 </html>
